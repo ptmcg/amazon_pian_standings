@@ -22,7 +22,7 @@ best_by_day.create_index("date")
 start_date = date(2023, 4, 7)
 
 # get daily bests where Python rank is <= 100, beginning at start_date
-streak_threshold = 150
+streak_threshold = 500
 top_n_streak = lt.Table().insert_many(
     takewhile(
         lambda rec: rec.python_rank <= streak_threshold,
